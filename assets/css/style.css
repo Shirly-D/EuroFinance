@@ -213,7 +213,8 @@ header ul li a { color: #EAF2F8;}
 .form-section ul { margin: 30px 0 25px; }
 
 .form-section ul li a::first-letter,
-.form-section h3::first-letter { text-transform: capitalize; }
+.form-section h3::first-letter,
+.form-section form label { text-transform: capitalize; }
 
 .form-section ul li { font-size: 11px; }
 .form-section ul li a { color: #69727E; }
@@ -256,6 +257,20 @@ header ul li a { color: #EAF2F8;}
   background-color: #369FE3;
   color: #fff;
 }
+
+/* .form-section form select::after {
+  content: "\f0d8";
+  font-family: "FontAwesome";
+  color: #000;
+} */
+
+.form-section form p {
+  color: #747474;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-section form p::first-letter { text-transform: capitalize; }
 
 
 
