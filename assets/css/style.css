@@ -100,15 +100,41 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 51%; 
   margin: 0 auto;
 }
 /*=================================
   Header styling starts here
 =================================*/
 
+header .wrapper div:first-child {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
 
+header div h1 { font-size: 35px; }
 
+header form input { 
+  padding: 7px 34px 7px 15px;
+  border: 1px solid #369FE3;
+}
+
+header form input::placeholder { 
+  color: #878787;
+  font-size: 15px;
+}
+
+header form button {
+  border: 1px solid #369FE3;
+  padding: 7px 15px;
+  margin-left: -6px;
+  display: inline-block;
+  background-color: #369FE3;
+  color: #E8F5FC;
+}
+
+header form button::first-letter { text-transform: capitalize; }
 
 
 
