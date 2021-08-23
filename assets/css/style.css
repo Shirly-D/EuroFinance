@@ -548,7 +548,7 @@ footer .logo a p {
   }
 
   .menu ul .show { display: block; }
-  .bar.ham-active { display: none; }
+  .bar.ham-active { transform: translateX(-50px); }
 
   .bar::before,
   .bar::after {
@@ -563,13 +563,13 @@ footer .logo a p {
   }
 
   .bar::before { 
-    top: -8px;
+    top: 0px;
     transform: translateY(7px);
     transition: 0.6s ease;
   }
 
   .bar::after { 
-    top: 8px; 
+    top: 0px; 
     transform: translateY(-7px);
   }
 
