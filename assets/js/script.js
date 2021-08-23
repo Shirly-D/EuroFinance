@@ -82,6 +82,13 @@ function isEmail(email) {
 }
 
 
+var menu = document.querySelector('.hamburger');
+var navUl = menu.querySelector('ul');
+menu.addEventListener('click', function(e){
+    menu.classList.toggle('active');
+    navUl.classList.toggle('active');
+})
+
 
 
 
