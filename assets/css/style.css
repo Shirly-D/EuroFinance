@@ -312,6 +312,8 @@ header ul li a { color: #EAF2F8;}
 }
 
 .form-section form div:last-child { margin-bottom: 115px; }
+.form-section.success input { border-color: #2ecc71;}
+.form-section.error input { border-color: #e74c3c;}
 
 
 /*=================================
