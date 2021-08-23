@@ -53,7 +53,7 @@ function inputValue() {
     } else {
         successMsg(workEmail);
     }  
-    if(!checkYes == checked) {
+    if(checkYes) {
         errorMsg(checkYes, '*This field is required');
     } else {
         successMsg(checkYes);
@@ -69,7 +69,7 @@ function errorMsg(input, message) {
     var formControl = input.parentElement;
     var small = formControl.querySelector('small');
     small.innerText = message;
-    formControl.className = ' form-control error';
+    formControl.className += ' form-control error';
 }
 
 function successMsg(input) {
