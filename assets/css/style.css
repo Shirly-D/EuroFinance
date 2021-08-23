@@ -548,7 +548,11 @@ footer .logo a p {
   }
 
   .menu ul .show { display: block; }
-  .bar.ham-active { transform: translateX(-50px); }
+
+  .bar.ham-active { 
+    background: transparent;
+    transform: translateX(-3px); 
+  }
 
   .bar::before,
   .bar::after {
