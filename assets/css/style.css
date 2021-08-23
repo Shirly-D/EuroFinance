@@ -586,7 +586,10 @@ footer .logo a p {
     background: #46525C;
     text-align: left;
     transition: 1s;
+    transform: scaleY(0);
   }
+
+  .menu ul.active { transform: scaleY(1); }
 
   .menu ul li {
     border-right: none;
