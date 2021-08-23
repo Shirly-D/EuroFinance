@@ -170,6 +170,7 @@ header ul li {
   text-transform: capitalize;
 }
 
+header ul li:last-child { border-right: none; }
 header ul li a { color: #EAF2F8;}
 
 
@@ -240,6 +241,7 @@ header ul li a { color: #EAF2F8;}
   margin-bottom: 8px;
   display: block;
   color: #7E696E;
+  cursor: pointer;
   font-size: 12px;
   font-weight: bold;
 }
@@ -249,6 +251,7 @@ header ul li a { color: #EAF2F8;}
   height: 28px;
   border: 3px solid #D7D7D7;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .form-section form select {
@@ -256,6 +259,7 @@ header ul li a { color: #EAF2F8;}
   height: 33px;
   background-color: #369FE3;
   color: #fff;
+  cursor: pointer;
 }
 
 /* .form-section form select::after {
@@ -265,21 +269,38 @@ header ul li a { color: #EAF2F8;}
 } */
 
 .form-section form p {
+  margin: 20px 0 28px;
   color: #747474;
   font-size: 12px;
   font-weight: bold;
 }
 
 .form-section form p::first-letter { text-transform: capitalize; }
+.form-section .checkbox { margin-bottom: -12px; }
 
+.form-section .checkbox input { 
+  width: 1.8%;
+  border: 1px solid #E4E4E4; 
+}
 
+.form-section .checkbox label {
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
 
+.form-section form p a { color: #6CB3E8; }
 
+.form-section form div:last-child input {
+  width: 19%;
+  height: 32px;
+  border: 1px solid #369FE3;
+  display: block;
+  background-color: #369FE3;
+  color: #CBE6F3;    
+}
 
-
-
-
-
+.form-section form div:last-child { margin-bottom: 115px; }
 
 
 /*=================================
@@ -290,11 +311,108 @@ header ul li a { color: #EAF2F8;}
   footer styling starts here
 =================================*/ 
 
+footer { background-color: #174583; }
 
+.footer-top .wrapper {
+  padding: 40px 0 55px;
+  display: flex;
+}
 
+footer .logo { width: 35%; }
+footer .logo a { color: #fff; }
 
+footer .logo a span {
+  padding: 5px 0;
+  border-bottom: 2px solid #2367A8;
+  display: block;
+  font-size: 30px;
+  text-transform: capitalize;
+}
 
+footer .logo a p { 
+  margin-top: 4px;
+  color: #B0C3DB;
+  font-size: 13px; 
+}
 
+.logo a p span {
+  border-bottom: none ;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.footer-links {
+  width: 37%;
+  padding: 10px;
+}
+
+.footer-links li:nth-child(1) {
+  margin-bottom: 17px;
+  display: block;
+  color: #D9E9F3;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.footer-links li a { color: #D9E9F3; }
+.icon-list { width: 37%; }
+
+.icon-list li:nth-child(1) {
+  padding: 0;
+  border-radius: 0;
+  margin: 10px 0 20px;
+  display: block;
+  background-color: transparent;
+  color: #D9E9F3;
+  font-size: 14px;
+}
+
+.icon-list li:nth-child(1)::first-letter { text-transform: capitalize; }
+
+.icon-list li a { text-indent: -9999px; }
+.icon-list li:nth-child(2) { margin-left: 0; }
+
+.icon-list li { 
+  padding: 7px 9px;
+  border-radius: 50%;
+  margin-left: 5%; 
+  background-color: #fff;  
+}
+
+.icon-list li a::before {
+  font-family: "FontAwesome";
+  font-size: 20px;
+  float: left;
+  text-indent: 0;
+}
+
+.linkedin::before { 
+  content: "\f0e1"; 
+  color: #297CB7;
+}
+
+.twitter::before { 
+  content: "\f099";
+  color: #39A1F2;
+}
+
+.play::before { 
+  content: "\f04b"; 
+  color: #F62100;
+}
+
+.facebook::before {
+   content: "\f09a"; 
+   color: #4161A3;
+  }
 
  /*=================================
   footer styling ends here
@@ -322,11 +440,34 @@ header ul li a { color: #EAF2F8;}
     color: #fff;
     transition: 1s;
   }
+
+  /* header end */
+
+  /* main start */
+
+ form div:last-child input:hover {
+   background-color: #69727E;
+   border: 1px solid #69727E;
+   transition: 1s;
+ }
+
+  /* main end */
+
+  /* footer start */
+
+  footer .logo a:hover,
+  .footer-links li a:hover {
+    color: #95a3b4;
+    transition: 1s;
+  }
+
   
 
 
 
-  /* header end */
+
+
+  /* footer end */
 
 
 }  
