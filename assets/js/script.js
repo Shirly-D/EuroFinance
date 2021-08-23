@@ -9,7 +9,6 @@ var workEmail = document.querySelector('work-email');
 var checkYes = document.querySelector('.yes');
 var checkNo = document.querySelector('.no');
 var nameLength = /^[A-Za-z. ]{3,30}$/;
-var emailCheck = /^[A-Za-z_]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -19,16 +18,28 @@ form.addEventListener('submit', function(e){
 function inputValue() {
     if(!nameLength.test(fname.value)) {
         errorMsg(fname, '*This field is required');
-        fname.classList.add('error');
     } else {
-        fname.classList.add('success');
+        successMsg(fname);
     }
+    
 }
 
-function errorMsg(input, message)
+function errorMsg(input, message) {
+    var formControl = input.parentElement;
+    var small = formControl.querySelector('small');
+    small.innerText = message;
+    formControl.className = ' form-control error';
+}
+
+function successMsg(input) {
+    var formControl = input.parentElement;
+    formControl.className = ' form-control success';
+}
 
 
-
+function isEmail(email) {
+    return /^[A-Za-z_]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/.test(email);
+}
 
 
 
