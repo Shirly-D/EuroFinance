@@ -753,6 +753,16 @@ footer .logo a p {
 
   /* main start */
 
+  .form-section ul li:first-child:hover a {
+    border-bottom: 1px solid #000000;
+    transition: 1s;
+  }
+
+  .form-section form p:hover a {
+    border-bottom: 1px solid #174583;
+    transition: 1s;
+  }
+
  form div:last-child input:hover {
    background-color: #69727E;
    border: 1px solid #69727E;
