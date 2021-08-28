@@ -37,6 +37,7 @@ function inputValue() {
         successMsg(company);
     }
     if(!nameLength.test(compType.value)) {
+        console.log(compType);
         errorMsg(compType, '*This field is required');
     } else {
         successMsg(compType);
@@ -47,6 +48,7 @@ function inputValue() {
         successMsg(country);
     }
     if(!nameLength.test(workEmail.value)) {
+        console.log(workEmail.value);
         errorMsg(workEmail, '*This field is required');
     } else if (!isEmail(email)) {
         errorMsg(workEmail, 'Email is invalid');
@@ -78,7 +80,7 @@ function successMsg(input) {
 }
 
 function isEmail(email) {
-    return /^[A-Za-z_]{3,}[0-9]{2,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/.test(email);
+    return /^[\w]{1,}[\w.+-]{0,}@[\w-]{1,}([.][a-zA-Z]{2,3}|[.][\w-]{2,3}[.][a-zA-Z]{2,3})$/.test(email);
 }
 
 
