@@ -67,7 +67,7 @@ function inputValue() {
 
 function errorMsg(input, message) {
     var formControl = input.parentElement;
-    var small = formControl.querySelector('small');
+    var small = formControl.querySelector('span');
     small.innerText = message;
     formControl.className += ' form-control error';
 }
@@ -89,6 +89,14 @@ menu.addEventListener('click', function(e){
     menu.classList.toggle('active');
     bar.classList.toggle('ham-active');
     navUl.classList.toggle('active');
+})
+
+// scroll top
+
+var scrollTop = document.querySelector('.form-section');
+scrollTop.addEventListener('click', function(e){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 })
 
 
