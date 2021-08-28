@@ -6,8 +6,8 @@ var company = document.querySelector('.company');
 var compType = document.querySelector('.comp-type');
 var country = document.querySelector('.country');
 var workEmail = document.querySelector('.work-email');
-var checkYes = document.querySelector('.yes');
-var checkNo = document.querySelector('.no');
+var checkYes = document.querySelector('.yes:checked');
+var checkNo = document.querySelector('.no:checked');
 var nameLength = /^[A-Za-z. ]{3,30}$/;
 
 form.addEventListener('submit', function(e){
@@ -16,43 +16,55 @@ form.addEventListener('submit', function(e){
 })
 
 function inputValue() {
-    if(!nameLength.test(fname.value)) {
+    if(fname.value == "") {
         errorMsg(fname, '*This field is required');
+    } else if(!nameLength.test(fname.value)  || fname.value.length < 1) {
+        errorMsg(fname, 'Enter valid name');
     } else {
         successMsg(fname);
     }
-    if(!nameLength.test(lname.value)) {
+    if(lname.value == "") {
         errorMsg(lname, '*This field is required');
+    } else if(!nameLength.test(lname.value)  ||lname.value.length < 1) {
+        errorMsg(lname, 'Enter valid name');
     } else {
         successMsg(lname);
     }
-    if(!nameLength.test(position.value)) {
+    if(position.value == "") {
         errorMsg(position, '*This field is required');
+    } else if(!nameLength.test(position.value)  || position.value.length < 1) {
+        errorMsg(position, 'Enter valid position');
     } else {
         successMsg(position);
     }
-    if(!nameLength.test(company.value)) {
+    if(company.value == "") {
         errorMsg(company, '*This field is required');
+    } else if(!nameLength.test(company.value)  || company.value.length < 1) {
+        errorMsg(company, 'Enter valid company name');
     } else {
         successMsg(company);
     }
-    if(!nameLength.test(compType.value)) {
+    if(compType.value == "") {
         errorMsg(compType, '*This field is required');
+    } else if(!nameLength.test(compType.value)  || compType.value.length < 1) {
+        errorMsg(compType, 'Select valid company Type');
     } else {
         successMsg(compType);
     }
-    if(!nameLength.test(country.value)) {
+    if(country.value == "") {
         errorMsg(country, '*This field is required');
+    } else if(!nameLength.test(country.value)  || country.value.length < 1) {
+        errorMsg(country, 'Select valid company name');
     } else {
         successMsg(country);
     }
-    if(!nameLength.test(workEmail.value)) {
+    if(workEmail.value == "") {
         errorMsg(workEmail, '*This field is required');
-    } else if (!isEmail(email)) {
+    } else if(!nameLength.test(workEmail.value) || (!isEmail(workEmail.value))) {
         errorMsg(workEmail, 'Email is invalid');
     } else {
         successMsg(workEmail);
-    }  
+    } 
     if(checkYes) {
         errorMsg(checkYes, '*This field is required');
     } else {
@@ -91,13 +103,6 @@ menu.addEventListener('click', function(e){
     navUl.classList.toggle('active');
 })
 
-// scroll top
-
-var scrollTop = document.querySelector('.form-section');
-scrollTop.addEventListener('click', function(e){
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-})
 
 
 
