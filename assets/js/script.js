@@ -103,6 +103,22 @@ menu.addEventListener('click', function(e){
     navUl.classList.toggle('active');
 })
 
+// scroll
+
+// var scrollTop = document.querySelector('.form-section');
+// scrollTop.addEventListener('click', function(e){
+//     scrollTop.classList.add('arrow-active');
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+// })
+
+// var bottomScrollTop = document.querySelector('.footer-top');
+// bottomScrollTop.addEventListener('click', function(e){
+//     bottomScrollTop.classList.add('arrow-active');
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
+// })
+
 
 
 
